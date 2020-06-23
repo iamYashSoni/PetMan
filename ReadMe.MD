@@ -1,5 +1,5 @@
-# Proposal
-### Develop a mobile application for pet owners
+# PetMan
+### A mobile application for pet owners
 ____
 
 ### **Group Members**
