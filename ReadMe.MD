@@ -4,11 +4,11 @@ ____
 
 ### **Group Members**
 ___
++ Yash Soni
 + Alexandre Geraldo
 + Diego Gonzalez
 + Henoch Tedros
 + Royan Hanson
-+ Yash Soni
 
 
 ### **Requirements**
