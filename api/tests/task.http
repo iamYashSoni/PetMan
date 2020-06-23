@@ -1,0 +1,108 @@
+# add doctor
+POST http://localhost:5000/task
+Content-Type: application/json
+
+{
+    "description" : "DayCare",
+    "start_date"  : "2019-12-31 08:10:12",
+    "end_date"    : "2019-12-31 08:12:12",
+    "owner_id"    : 1
+}
+
+
+POST http://localhost:5000/task
+Content-Type: application/json
+
+{
+    "description" : "Playtime",
+    "due_date"    : "2019-01-01",
+    "owner_id"    : 1
+}
+
+# get task
+GET http://localhost:5000/task/1/1
+Content-Type: application/json
+
+# update task
+PUT http://localhost:5000/task/1/1
+Content-Type: application/json
+
+{
+    "description" : "Super Day Care"
+}
+
+PUT http://localhost:5000/task/1/1
+Content-Type: application/json
+
+{
+    "due_date" : "2020-01-01"
+}
+
+PUT http://localhost:5000/task/1/1
+Content-Type: application/json
+
+{
+    "completed" : true
+}
+
+PUT http://localhost:5000/task/1/1
+Content-Type: application/json
+
+{
+    "description" : "The Super Day Care"
+}
+
+
+# delete task
+DELETE http://localhost:5000/task/2/1
+Content-Type: application/json
+
+
+# get all tasks
+GET http://localhost:5000/tasks/1
+Content-Type: application/json
+
+
+
+
+POST http://localhost:5000/task
+Content-Type: application/json
+
+{
+    "description" : "DayCare",
+    "due_date"    : "2019-01-01",
+    "owner_id"    : 1
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01 08:10:12"
+}
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-12-31",
+    "completed"   : true
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01",
+    "completed"   : true
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01"
+}

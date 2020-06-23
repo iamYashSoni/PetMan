@@ -1,0 +1,217 @@
+POST https://gsu-petman.herokuapp.com/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username"   : "petman",
+    "password"   : "petman",
+    "first_name" : "petman",
+    "last_name"  : "petman",
+    "email"      : "petman@gsu.edu"
+}
+
+POST https://gsu-petman.herokuapp.com/auth
+Content-Type: application/json
+
+{
+    "username" : "petman",
+    "password" : "petman"
+}
+
+POST https://gsu-petman.herokuapp.com/pet
+Content-Type: application/json
+
+{
+    "name"     : "pluto",
+    "sex"      : "M",
+    "type"     : "dog",
+    "breed"    : "bloodhound",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+POST https://gsu-petman.herokuapp.com/pet
+Content-Type: application/json
+
+{
+    "name"     : "bolt",
+    "sex"      : "M",
+    "type"     : "dog",
+    "breed"    : "superdog",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+POST https://gsu-petman.herokuapp.com/pet
+Content-Type: application/json
+
+{
+    "name"     : "boomer",
+    "sex"      : "M",
+    "type"     : "dog",
+    "breed"    : "hero",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+POST https://gsu-petman.herokuapp.com/pet
+Content-Type: application/json
+
+{
+    "name"     : "lassie",
+    "sex"      : "F",
+    "type"     : "dog",
+    "breed"    : "Rough Collie",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+
+
+# list all pets
+GET https://gsu-petman.herokuapp.com/pets/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+POST https://gsu-petman.herokuapp.com/pet
+Content-Type: application/json
+
+{
+    "name":"sample",
+    "sex":"Male",
+    "type":"Dog",
+    "breed":"sample",
+    "owner_id":1,
+    "bod":"Nov 23, 2019"
+}
+
+
+PUT https://gsu-petman.herokuapp.com/pet/2/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name"  : "sample2",
+    "sex"   : "Male",
+    "type"  : "Dog",
+    "breed" : "super breed",
+    "owner_id":1,
+    "dob":"Nov 24, 2019"
+}
+
+
+
+
+# get pet
+GET https://gsu-petman.herokuapp.com/pet/7/1 HTTP/1.1
+Content-Type: application/json
+
+
+# delete pet
+DELETE https://gsu-petman.herokuapp.com/pet/13/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+
+POST https://gsu-petman.herokuapp.com/task
+Content-Type: application/json
+
+{
+    "description" : "DayCare",
+    "due_date"    : "2019-01-01",
+    "owner_id"    : 1
+}
+
+
+
+POST https://gsu-petman.herokuapp.com/task
+Content-Type: application/json
+
+{
+    "description" : "DayCare",
+    "start_date"  : "2019-11-29 08:10:12",
+    "end_date"    : "2019-11-29 08:12:12",
+    "owner_id"    : 1
+}
+
+
+# get task
+GET https://gsu-petman.herokuapp.com/task/2/1
+Content-Type: application/json
+
+# update task
+PUT https://gsu-petman.herokuapp.com/task/1/1
+Content-Type: application/json
+
+{
+    "description" : "Super Day Care"
+}
+
+PUT https://gsu-petman.herokuapp.com/task/1/1
+Content-Type: application/json
+
+{
+    "due_date" : "2020-01-01"
+}
+
+PUT https://gsu-petman.herokuapp.com/task/2/1
+Content-Type: application/json
+
+{
+    "completed" : false
+}
+
+
+# delete task
+DELETE https://gsu-petman.herokuapp.com/task/2/1
+Content-Type: application/json
+
+
+# get all tasks
+GET https://gsu-petman.herokuapp.com/tasks/1
+Content-Type: application/json
+
+
+
+
+POST http://localhost:5000/task
+Content-Type: application/json
+
+{
+    "description" : "DayCare",
+    "due_date"    : "2019-01-01",
+    "owner_id"    : 1
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01 08:10:12"
+}
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-12-31",
+    "completed"   : true
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01",
+    "completed"   : true
+}
+
+
+POST http://localhost:5000/tasks/1
+Content-Type: application/json
+
+{
+    "start_date"  : "2019-01-01"
+}

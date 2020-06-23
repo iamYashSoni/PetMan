@@ -1,0 +1,28 @@
+# authentication
+POST https://gsu-petman.herokuapp.com/auth
+Content-Type: application/json
+
+{
+    "username" : "petman",
+    "password" : "petman"
+}
+
+# get user list 
+GET https://gsu-petman.herokuapp.com/users
+Content-Type: application/json
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzU0OTUwOTIsImlhdCI6MTU3NTQ5NDc5MiwibmJmIjoxNTc1NDk0NzkyLCJpZGVudGl0eSI6MX0.OZFjpOyY2sCYSaTgd0cE_qD42pdFJaZtsTNJ0Rm5v2s
+
+#add new task
+POST https://gsu-petman.herokuapp.com/task
+Content-Type: application/json
+
+{
+    "description" : "Demo",
+    "start_date"  : "2019-12-04 08:10:12",
+    "end_date"    : "2019-12-04 08:12:12",
+    "owner_id"    : 2
+}
+
+# list all tasks
+GET https://gsu-petman.herokuapp.com/tasks/2
+Content-Type: application/json

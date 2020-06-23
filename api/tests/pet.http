@@ -1,0 +1,66 @@
+# add pet
+POST http://localhost:5000/pet
+Content-Type: application/json
+
+{
+    "name"     : "pluto",
+    "sex"      : "M",
+    "type"     : "dog",
+    "breed"    : "bloodhound",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+POST http://localhost:5000/pet
+Content-Type: application/json
+
+{
+    "name"     : "bolt6",
+    "sex"      : "M",
+    "type"     : "dog",
+    "breed"    : "superdog",
+    "owner_id" : 1,
+    "dob"      : "Nov 24, 2019"
+}
+
+# get pet
+GET http://localhost:5000/pet/2/1 HTTP/1.1
+Content-Type: application/json
+
+# change pet
+PUT http://localhost:5000/pet/8/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "sex"   : "Male",
+    "type"  : "superdog",
+    "breed" : "bloodhound"
+}
+
+# delete pet
+DELETE http://localhost:5000/pet/pluto2/1 HTTP/1.1
+Content-Type: application/json
+
+# list all pets
+GET http://localhost:5000/pets/1 HTTP/1.1
+Content-Type: application/json
+
+
+PUT http://localhost:5000/pet/8/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "sex"   : "Male",
+    "type"  : "superdog",
+    "breed" : "bloodhound"
+}
+
+PUT http://localhost:5000/pet/8/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "sex"   : "Male",
+    "type"  : "superdog",
+    "breed" : "bloodhound",
+    "dob"   : "Nov 25, 2010"
+}
